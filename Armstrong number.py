@@ -1,11 +1,17 @@
-num=int(input("Enter a no. "))
-Sum=0
-n=num
-while(num>0):
-	rem=num%10
-	Sum+=rem*rem*rem
-	num=num//10
-if n==Sum:
-	print(n,"is armstrong number")
+import math
+number = int(input("Enter the number : "))
+result = 0
+n = 0
+temp = number;
+while (temp != 0):
+    temp=int(temp / 10)
+    n = n + 1#Checking if the number is armstrong
+temp = number
+while (temp != 0):
+    remainder = temp % 10
+    result = result + pow(remainder, n)
+    temp = int(temp/10)
+if(result == number):
+    print("Armstrong number")
 else:
-	print(n,"is not a armstrong number")
+    print("Not an Armstrong number")
